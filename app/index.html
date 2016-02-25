@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4 2 2 etsy recreation</title>
+    <link rel="stylesheet" href="styles/app.scss" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+
+      <div id="search-nav" class="row">
+        <div id="etsy" class="col-md-1">Etsy</div>
+        <div id="tfheader" class="col-md-6">
+      		<form id="tfnewsearch" method="get" action="http://www.google.com">
+      		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+      		</form>
+        	<div class="tfclear"></div>
+      	</div>
+        <div id="sell" class="col-md-2">Sell on Etsy</div>
+        <div id="register" class="col-md-1">Register</div>
+        <div id="sign" class="col-md-1">Sign In</div>
+        <div id="cart" class="col-md-1">Cart</div>
+      </div>
+
+    <div id="nav-row" class="row">
+      <div id="Clothing" class="col-md-2">Clothing &amp Accessories</div>
+      <div id="Jewelry" class="col-md-1">Jewelry</div>
+      <div id="Craft" class="col-md-2">Craft Supplies &amp Tools</div>
+      <div id="Weddings" class="col-md-1">Weddings</div>
+      <div id="Entertainment" class="col-md-1">Entertainment</div>
+      <div id="Home" class="col-md-2">Home Living</div>
+      <div id="Kids" class="col-md-2">Kids &amp Baby</div>
+      <div id="Vintage" class="col-md-1">Vintage</div>
+    </div>
+
+    <ul class="tiles"></ul>
+
+    <div class="row">
+      <div id="sidebar" class="col-md-3">
+        <span>All Categories</span>
+        <li>Home &amp Living</li>
+        <li>Art & Collections</li>
+        <li>Weddings</li>
+        <li>Clothing</li>
+        <li>Paper &amp Party Supplies</li>
+        <li>Accessories</li>
+        <li>Jewelry</li>
+        <li>Craft Supplies &amp Tools</li>
+        <li>Bags &amp Purses</li>
+        <li>Bath &amp Beauty</li>
+        <li>Shoes</li>
+        <li>Books, Movies &amp Music</li>
+        <li>Electronics &amp Accessories</li>
+        <li>Toys &amp Games</li>
+        <li>Pet Supplies</li>
+    </div>
+    </div>
+  </div>
+
+    <script id="tile-template" type="text/x-handlebars-template">
+      <li class="tiles">
+        <img src="{{}}.{{}}" alt="{{}}">
+      </li>
+    </script>
+
+    <script src="/Users/Erik/code/4.2.2-etsy-recreation/app/scripts/index.js"></script>
+  </body>
+</html>
