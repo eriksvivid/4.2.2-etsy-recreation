@@ -5,17 +5,6 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
 
 *,
 *::before,
@@ -30,7 +19,7 @@ img {
 
 body{
   margin: 0 auto;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(230, 230, 230);
 }
 
 .container {
@@ -39,6 +28,7 @@ body{
 
 #search-nav {
   padding: 10px 0px 10px 0px;
+  background-color: white;
 }
 
 #etsy {
@@ -110,15 +100,20 @@ font-size: 40px;
 }
 
 #nav-row {
-  color: gray;
+  background-color: white;
   border-bottom: 1px solid gray;
   border-top: 1px solid gray;
   padding: 10px;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+#main {
 }
 
 #sidebar {
-  list-style-type: none;
-  border: 1px solid gray;
+  // list-style-type: none;
+  // border: 1px solid gray;
   padding-top: 10px;
 }
 
@@ -129,4 +124,67 @@ font-size: 40px;
 
 #sidebar span {
   font-weight: bold;
+}
+
+.all-cat {
+  border: 1px solid gray;
+  list-style-type: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.item-type{
+  border: 1px solid gray;
+  padding: 10px;
+  background-color: white;
+  color:  #0088cc;
+}
+
+.tiles {
+  list-style-type: none;
+}
+
+#footer{
+  text-align: center;
+  background-color: white;
+}
+
+.subscribe{
+  margin-top: 20px;
+  border: solid 10px rgba(80, 80, 80, 0.2);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.btn-btn-default {
+  background-color: #0088cc;
+}
+
+.tile {
+  background-color: white;
+  box-shadow: 1px;
+  height: 300px;
+  margin: 5px;
+
+}
+p {
+  color: rgb(40, 40, 40);
+}
+
+.info {
+  list-style-type: none;
+  padding-left: 200px;
+}
+
+.info li {
+  padding: 5px;
+}
+
+.business,
+.community,
+.discover,
+.us,
+.follow {
+  text-align: left;
 }

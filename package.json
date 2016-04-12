@@ -4,9 +4,6 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
-    
-    "bootstrap-sass": "^3.3.6",
-    
     "git-directory-deploy": "^1.4.0",
     "autoprefixer": "^6.3.3",
     "browserify-shim": "^3.8.12",
@@ -24,6 +21,13 @@
     "onchange": "^2.0.0",
     "jquery": "^2.2.0",
     "underscore": "^1.8.3"
+    , "bootstrap-sass": "^3.3.6"
+    
+    , "handlebars": "^4.0.5"
+    , "hbsfy": "^2.5.1"
+    
+    
+    
   },
   "scripts": {
     "html": "cp app/*.html dist/",
@@ -42,19 +46,29 @@
     "build:images": "npm run imagemin && npm run favicon",
     "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
 
-    "deploy": "npm run build && git-directory-deploy",
+    "deploy": "npm run build && git-directory-deploy --directory dist/ && npm run deploy:done",
+    "deploy:done": "say -v Karen 'Your project is now on gh pages. Do not forget to add the link to the re po description.'",
 
     "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
     "watch:html": "npm run html && onchange 'app/**/*.html' -- npm run html",
+    "watch:images": "npm run build:images && onchange 'app/images/*' -- npm run build:images",
     "server": "live-server --open='dist'",
-    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:js' 'npm run server'"
+    "watch": "parallelshell 'npm run watch:html' 'npm run watch:scss' 'npm run watch:images' 'npm run watch:js' 'npm run server'"
   },
   "browserify": {
-    "transform": [ "browserify-shim", "strictify" ]
+    "transform": [
+      "browserify-shim",
+      "hbsfy",
+      
+      "strictify"
+    ]
   },
   "browserify-shim": {
     "jQuery": "$",
     "underscore": "_"
+  },
+  "strictify":{
+      "exclude": [".handlebars", ".hbs", "json"]
   }
 }

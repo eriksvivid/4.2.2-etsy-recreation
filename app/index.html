@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>4 2 2 etsy recreation</title>
-    <link rel="stylesheet" href="styles/app.scss" type="text/css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
   </head>
   <body>
     <div class="container">
@@ -34,37 +33,162 @@
       <div id="Kids" class="col-md-2">Kids &amp Baby</div>
       <div id="Vintage" class="col-md-1">Vintage</div>
     </div>
+    <div id="main">
 
-    <ul class="tiles"></ul>
+      <div class="row">
+        <div id="sidebar" class="col-md-3">
+          <p>Show results for:</p>
+          <div class="all-cat">
+            <span>All Categories</span>
+            <li>Home &amp Living</li>
+            <li>Art & Collections</li>
+            <li>Weddings</li>
+            <li>Clothing</li>
+            <li>Paper &amp Party Supplies</li>
+            <li>Accessories</li>
+            <li>Jewelry</li>
+            <li>Craft Supplies &amp Tools</li>
+            <li>Bags &amp Purses</li>
+            <li>Bath &amp Beauty</li>
+            <li>Shoes</li>
+            <li>Books, Movies &amp Music</li>
+            <li>Electronics &amp Accessories</li>
+            <li>Toys &amp Games</li>
+            <li>Pet Supplies</li>
+          </div>
+          <p>Refine your search</p>
+          <div class="item-type">
+            <div class="radio"><p>Item Types</p>
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                All items
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Handmade
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                Vintage
+              </label>
+            </div>
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="low"></label>
+                <input type="text" class="form-control" id="low2" placeholder="Low">
+              </div>
+              <p>to</p>
+              <div class="form-inline">
+                <label for="high"></label>
+                <input type="text" class="form-control" id="high2" placeholder="High">
+              </div>
+              <button type="submit" class="btn btn-price">></button>
+            </form>
+            <div class="checkbox"><p>Ordering Options</p>
+              <label>
+                <input type="checkbox" value="">
+                Accepts Etsy gift cards
+              </label>
+            </div>
+            <div class="checkbox2">
+              <label>
+                <input type="checkbox" value="">
+                Customizable
+              </label>
+            </div>
+            <div class="radio"><p>Shop Location</p>
+              <label>
+                <input type="radio" name="optionsRadios" id="ordering-options" value="ordering-option" checked>
+                Anywhere
+              </label>
+              <label>
+                <input type="radio" name="optionsRadios2" id="ordering-options2" value="ordering-option2" checked>
+                United States
+              </label>
+              <a href="location">Choose a custom location</a>
+            </div>
 
-    <div class="row">
-      <div id="sidebar" class="col-md-3">
-        <span>All Categories</span>
-        <li>Home &amp Living</li>
-        <li>Art & Collections</li>
-        <li>Weddings</li>
-        <li>Clothing</li>
-        <li>Paper &amp Party Supplies</li>
-        <li>Accessories</li>
-        <li>Jewelry</li>
-        <li>Craft Supplies &amp Tools</li>
-        <li>Bags &amp Purses</li>
-        <li>Bath &amp Beauty</li>
-        <li>Shoes</li>
-        <li>Books, Movies &amp Music</li>
-        <li>Electronics &amp Accessories</li>
-        <li>Toys &amp Games</li>
-        <li>Pet Supplies</li>
+          </div>
+
+        </div>
+        <ul class="col-md-9 tiles"></ul>
+      </div>
     </div>
+
+    <div id="footer" class="row">
+      <div class="col-md-12 subscribe">
+        <p>Get top trends and fresh editors' picks in your inbox with Etsy Finds.</p>
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="exampleInputEmail2"></label>
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter your email">
+          </div>
+          <button type="submit" class="btn-btn-default">Subscribe</button>
+        </form>
+      </div>
+      <div class="row info">
+        <div class="col-md-2 business">
+          <li>Turn your passion into a business</li>
+          <li><a class="btn btn-default" href="#" role="button">Open a shop</a></li>
+          <li>Sell on Etsy</li>
+          <li><a href="">Seller Handbook</a></li>
+          <li><a href="">Etsy credit card reader</a></li>
+          <li><a href="">Manufacturing</a></li>
+        </div>
+        <div class="col-md-2 community">
+          <li>Join the community</li>
+          <li><a href="">Teams</a></li>
+          <li><a href="">Forums</a></li>
+          <li><a href="">Upcoming events</a></li>
+          <li><a href="">Affiliates</a></li>
+        </div>
+        <div class="col-md-2 discover">
+          <li>Discover and shop</li>
+          <li><a href="">Gift cards</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Tastemakers</a></li>
+          <li><a href="">Mobile apps</a></li>
+          <li><a href="">Gift registries</a></li>
+          <li><a href="">WHolesale</a></li>
+          <li><a href="">Search</a></li>
+          <li><a href="">Editors' Picks</a></li>
+        </div>
+        <div class="col-md-2 us">
+          <li>Get to know us</li>
+          <li><a href="">About</a></li>
+          <li><a href="">Policies</a></li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Press</a></li>
+          <li><a href="">Developers</a></li>
+          <li><a href="">Investors</a></li>
+        </div>
+        <div class="col-md-2 follow">
+          <li>Follow Etsy</li>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Pinterest</a></li>
+          <li><a href="">Instagram</a></li>
+        </div>
+      </div>
     </div>
   </div>
-
     <script id="tile-template" type="text/x-handlebars-template">
-      <li class="tiles">
-        <img src="{{}}.{{}}" alt="{{}}">
-      </li>
+      <!-- <h6>{{title}}</h6> -->
+
+      {{#each results}}
+          <li class="col-md-3 tile">
+            <a href="#" class="images">
+              <img src="{{Images.0.url_fullxfull}}" alt="">
+              <p>{{title}}</p>
+            </a>
+          </li>
+      {{/each}}
     </script>
 
-    <script src="/Users/Erik/code/4.2.2-etsy-recreation/app/scripts/index.js"></script>
+    <script src="js/bundle.js"></script>
   </body>
 </html>
